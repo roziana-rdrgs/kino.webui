@@ -61,3 +61,12 @@ export interface ILoginForm {
 export interface IFormSign {
   onSubmit: (values: ILoginForm) => void;
 }
+
+export interface ILoginResponse {
+  token: {
+    accessToken: string;
+    idToken: string;
+    expiresIn: number;
+  };
+  user: IUser;
+}

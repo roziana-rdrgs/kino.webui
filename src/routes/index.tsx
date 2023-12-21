@@ -1,17 +1,18 @@
-const RoutesComponent: React.FC = () => {
-  //const { data } = useContext(AuthProvider);
 
-  // if (!data) return <RoutesPublic />;
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Login } from "../pages/admin/login";
 
-  // if (data.user.profiles.includes(clinicAdminRole)) {
-  //   return <RoutesClinicAdmin />;
-  // }
-
-  // if (data.user.profiles.includes(vetRole)) {
-  //   return <RoutesVet />;
-  // }
-
-   return <div />;
-};
+const RoutesComponent: React.FC = () => (
+  <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+  
+      </Routes>
+    </BrowserRouter>
+);
 
 export default RoutesComponent;

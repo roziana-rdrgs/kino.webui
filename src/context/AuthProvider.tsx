@@ -9,7 +9,6 @@ export interface IUpdateData {
   token: {
     accessToken: string;
     expiresIn: number;
-    crossToken: string;
   };
   user: IUser;
 }
